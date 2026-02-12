@@ -20,6 +20,11 @@ yesBtn.addEventListener("click", () => {
   questionContainer.style.display = "none";
   heartLoader.style.display = "inherit";
 
+  const music = document.getElementById("bg-music");
+music.currentTime = 0;
+music.play().catch(error => console.log(error));
+
+
   const timeoutId = setTimeout(() => {
     heartLoader.style.display = "none";
     resultContainer.style.display = "inherit";
